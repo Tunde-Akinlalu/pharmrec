@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Download was Successful</h1>
+    <br/>
+
+<div class="d-grid gap-2 col-6 mx-auto" >
+    <a class="btn btn-outline-secondary btn-lg" href="{{ url_for('pharma_rec') }}" role="button">Add Prescription</a>
+    <a class="btn btn-outline-secondary btn-lg" href="{{ url_for('.prescription_report') }}">Generate Excel Report</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Pharmacy Record</h1>
+    <br/>
+
+    <form method="POST">
+            {{ form.hidden_tag() }}
+        <div class="row g-3">
+
+            <div class="col-md">
+                    {{ form.emr.label() }}
+                    {{ form.emr(class="form-control") }}
+                    <div id="emrHelp" class="form-text">Patient's EMR must be six digits.</div>
+            </div>
+            <div class="col-md">
+                    {{ form.scheme.label() }}
+                    {{ form.scheme(class="form-select") }}
+                    <div id="schemeHelp" class="form-text">Select patient's scheme.</div>
+            </div>
+            <div class="col-md">
+                    {{ form.medication1.label() }}
+                    {{ form.medication1(class="form-control") }}
+                     <div id="medication1Help" class="form-text">Input First Prescription.</div>
+            </div>
+
+        </div>
+        <br/>
+        <div class="row g-3">
+            <div class="col-md">
+                    {{ form.medication2.label() }}
+                    {{ form.medication2(class="form-control") }}
+                     <div id="medication2Help" class="form-text">Input Second Prescription.</div>
+            </div>
+            <div class="col-md">
+                    {{ form.medication3.label() }}
+                    {{ form.medication3(class="form-control") }}
+                     <div id="medication3Help" class="form-text">Input Third Prescription.</div>
+            </div>
+            <div class="col-md">
+                    {{ form.medication4.label() }}
+                    {{ form.medication4(class="form-control") }}
+                     <div id="medication4Help" class="form-text">Input Fourth Prescription.</div>
+            </div>
+        </div>
+        <br/>
+        <div class="row g-3">
+            <div class="col-md">
+                    {{ form.payment.label() }}
+                    {{ form.payment(class="form-control") }}
+                     <div id="paymentHelp" class="form-text">Amount Paid.</div>
+            </div>
+            <div class="col-md">
+                    <div class="col">
+                    {{ form.status.label() }}
+                    {{ form.status(class="form-select") }}
+                    <div id="statusHelp" class="form-text">Prescription Status</div>
+            </div>
+                <br/>
+        </div>
+        <div class="input-group">
+            <div class="col-md">
+
+                    {{ form.remark.label() }}
+                    {{ form.remark(class="form-control") }}
+                    <div id="remarkHelp" class="form-text">Add other Information here</div>
+            </div>
+        </div>
+            <br/><br/><br/>
+        <div class="d-grid gap-2 col-6 mx-auto">
+        {{ form.submit(class="btn btn-primary") }}
+        </div>
+        <br/><br/><br/>
+
+    <form/>
+<br/><br/>
+
+            {% endblock %}
